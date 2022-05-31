@@ -4,18 +4,26 @@
 // -1, -7, 567, 89, 223-> 3
 
 Console.WriteLine("Введите целые числа через пробел: ");
-int [] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
+int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-int count = 0;
-for (int i = 0; i < array.Length; i++)
+int PositivElements(int[] arr)
 {
-    if (array[i] > 0)
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
     {
-        count = count+1;
+        if (arr[i] > 0)
+        {
+            count = count + 1;
+        }
+
     }
+    return count;
 }
 
-Console.WriteLine($"В массиве [ {String.Join(' ', array)} ] содержится {count} чисел больше нуля");
+int SumResult = PositivElements(array);
+
+Console.WriteLine($"В массиве [ {String.Join(' ', array)} ] содержится {SumResult} чисел больше нуля");
+
 
 
 
