@@ -33,6 +33,7 @@ void PrintArray (int[,] array)
 
 int[,] arr = GetArray(5, 7);
 PrintArray(arr);
+Console.WriteLine();
 
 int [,] GetArrayFlip(int [,] array)
 {
@@ -47,7 +48,7 @@ int [,] GetArrayFlip(int [,] array)
         {
             if(i == 0) tempArray [i, j] = array[a-1, j];
             else if (i == a-1) tempArray [i, j] = array[0, j];
-            else tempArray[i, j] = GetArrayFlip [i, j];
+            else tempArray[i, j] = array [i, j];
         }
     }
     return tempArray;
@@ -56,4 +57,6 @@ int [,] GetArrayFlip(int [,] array)
 
 int [,] arrFlip = GetArrayFlip(arr);
 PrintArray(arr);
+
+//Random.NextDouble() * (maxValue - minValue) + minValue
 
