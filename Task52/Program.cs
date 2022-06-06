@@ -32,7 +32,7 @@ void PrintArray(int[,] array)
         for (int j = 0; j < array.GetLength(1); j++)
 
         {
-            Console.Write("{0,6}", array[i, j]);
+            Console.Write(array[i, j] + "  ");
         }
         Console.WriteLine();
     }
@@ -44,23 +44,21 @@ PrintArray(arr);
 
 
 
-int ArithmeticMean(int[,]array)
+void ArithmeticMean(int[,] array)
 {
-    int sum = 0;
-    int result = 0;
+
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        
+        double sum = 0;
+        double result = 0;
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            sum +=array[i,j]; 
+            sum += array[i, j];
         }
         result = sum / array.GetLength(1);
-        //break;
+        Console.Write($"{Math.Round(result, 1)}   ");
     }
-    return result;
 }
 
-int result = ArithmeticMean(arr);
-Console.WriteLine();
-Console.WriteLine(result);
+ArithmeticMean(arr);
+Console.WriteLine(ArithmeticMean);
