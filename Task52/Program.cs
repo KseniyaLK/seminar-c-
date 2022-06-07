@@ -61,4 +61,4 @@ void ArithmeticMean(int[,] array)
 }
 
 ArithmeticMean(arr);
-Console.WriteLine(ArithmeticMean);
+//Console.WriteLine(ArithmeticMean);
